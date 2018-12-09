@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Extend a 3-digit color code to a 6-digit color code</title>
+</head>
+<body>
+    
+
+    <script>
+    const extend_Hex = shortHex =>
+  '#' +
+  shortHex
+    .slice(shortHex.startsWith('#') ? 1 : 0)
+    .split('')
+    .map(x => x + x)
+    .join('');
+
+console.log(extend_Hex('#03f'));
+console.log(extend_Hex('05a'));
+    </script>
+
+    
+</body>
+</html>
